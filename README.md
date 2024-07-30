@@ -21,7 +21,7 @@ Get current temperature for a given location
 - Organize styles based on modules
 
 ### Solved
-- Get APIs for location/leather
+- Get APIs for location/weather
 - Hide output container initially
 - Fetching two URLs depending on each other at the same time
 - Using SCSS instead of regular CSS
