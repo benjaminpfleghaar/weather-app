@@ -1,13 +1,8 @@
-import { useState } from "react";
-
-export default function Input({ getWeatherData }) {
-	const [city, setCity] = useState("");
-
+export default function Input({ setIsFetchingData, city, setCity }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		getWeatherData(city);
-		setCity("");
+		setIsFetchingData(true);
 	};
 
 	return (
