@@ -2,7 +2,7 @@
 Get current temperature for a given location
 
 ## Wireframe
-![Wireframe](https://github.com/user-attachments/assets/f4dfa280-edff-4ac0-b60c-263e3a4c6b3d)
+[Wireframe](https://github.com/user-attachments/assets/f4dfa280-edff-4ac0-b60c-263e3a4c6b3d)
 
 ## Tasks
 1. Build UI
@@ -13,21 +13,23 @@ Get current temperature for a given location
 5. Display Output and reset form
 
 ## Challenges/Edge Cases
-- Get APIs for Location/Weather ✅
 - How to name components properly?
-- Hide output container initially ✅
-- Fetching two URLs depending on each other at the same time ✅
 - Error handling
   - City does not exist
   - Weather data can not be fetched
-- Organize styles based on modules
 - Handle race conditions by using `useEffect()`
-- Using SCSS instead of regular CSS ✅
+- Organize styles based on modules
+
+### Solved
+- Get APIs for Location/Weather
+- Hide output container initially
+- Fetching two URLs depending on each other at the same time
+- Using SCSS instead of regular CSS
 
 ## Things I learned so far
-- Inputs can have a Regex pattern but it doesn't work within react
+- Inputs can have a Regex pattern line `pattern=[A-za-z]` but it doesn't work within react
 - Check if an object is empty via `Object.keys(Obj).length`
-- Set focus on input on page load via autofocus (autoFocus)
+- Set focus on input on page load via `autofocus` (React: autoFocus)
 
 ## Ideas
 - Show city suggestions while typing
