@@ -1,10 +1,10 @@
-export default function Weather({ locationWeather }) {
+export default function Weather({ weatherData }) {
 	return (
 		<>
-			{Object.keys(locationWeather).length !== 0 && (
+			{Object.keys(weatherData).length !== 0 && (
 				<main>
-					<p>{locationWeather.city}</p>
-					<p className="temperature">{locationWeather.temperature}</p>
+					<p>{weatherData.city}</p>
+					<p className="temperature">{weatherData.temperature}</p>
 				</main>
 			)}
 		</>

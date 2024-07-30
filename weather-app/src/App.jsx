@@ -4,12 +4,14 @@ import Weather from "./Weather";
 
 export default function App() {
 	const [city, setCity] = useState("");
-	const [isFetchingData, setIsFetchingData] = useState(false);
-	const [locationWeather, setLocationWeather] = useState({});
+	const [isLoading, setIsLoading] = useState(false);
+	const [weatherData, setWeatherData] = useState({});
 
 	useEffect(() => {
+		let isFetchingData = true;
+
 		const fetchDataAsync = async (city) => {
-			if (isFetchingData) {
+			if (isFetchingData && isLoading) {
 				// Get coordinates based on city name from https://nominatim.org/
 				const coordinatesRessource = await fetch(
 					`https://nominatim.openstreetmap.org/search?q=${city}&format=jsonv2&limit=1&accept-language=en-US`
@@ -22,29 +24,37 @@ export default function App() {
 				);
 				const weatherData = await weatherRessource.json();
 
-				setLocationWeather({
+				// Set data
+				setWeatherData({
 					city: coordinatesData[0].display_name,
 					temperature: weatherData.current.temperature_2m + "°",
 				});
+
+				// Reset loading indicator
+				setIsLoading(false);
+
+				// Reset form
+				setCity("");
 			}
 		};
 
 		fetchDataAsync(city);
 
+		// Cleanup function to avoid race conditions
 		return () => {
-			setIsFetchingData(false);
-			setCity("");
+			isFetchingData = false;
 		};
-	}, [isFetchingData]);
+	}, [isLoading]);
 
 	return (
 		<>
 			<Input
-				setIsFetchingData={setIsFetchingData}
 				city={city}
 				setCity={setCity}
+				isLoading={isLoading}
+				setIsLoading={setIsLoading}
 			/>
-			<Weather locationWeather={locationWeather} />
+			<Weather weatherData={weatherData} />
 		</>
 	);
 }

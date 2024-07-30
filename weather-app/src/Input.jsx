@@ -1,8 +1,8 @@
-export default function Input({ setIsFetchingData, city, setCity }) {
+export default function Input({ city, setCity, isLoading, setIsLoading }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		setIsFetchingData(true);
+		setIsLoading(true);
 	};
 
 	return (
@@ -16,7 +16,9 @@ export default function Input({ setIsFetchingData, city, setCity }) {
 					required
 					autoFocus
 				/>
-				<button type="submit">Search</button>
+				<button type="submit" disabled={isLoading}>
+					Search
+				</button>
 			</form>
 		</header>
 	);
