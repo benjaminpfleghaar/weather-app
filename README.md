@@ -1,4 +1,4 @@
-# weather-app
+# Weather App
 Get current temperature for a given location
 
 ## Wireframe
