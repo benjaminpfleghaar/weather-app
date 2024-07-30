@@ -17,14 +17,14 @@ Get current temperature for a given location
 - Error handling
   - City does not exist
   - Weather data can not be fetched
-- Handle race conditions by using `useEffect()`
 - Organize styles based on modules
 
 ### Solved
 - Get APIs for location/weather
-- Hide output container initially
+- Handle race conditions by using `useEffect()`
 - Fetching two URLs depending on each other at the same time
 - Using SCSS instead of regular CSS
+- Hide output container initially
 
 ## Things I learned so far
 - Inputs can have a Regex pattern like `pattern=[A-Za-z]` but it doesn't work within React :(
