@@ -33,12 +33,14 @@ Get current temperature for a given location
 
 ## Ideas
 - Show city suggestions while typing
-- Prevent click while waiting for response
 - Provide loading indicator after click
 - Get position of user via browser geo
 - Save/Delete search queries
 - Change background color based on current temperature
 - Add a favicon to the header
+
+### Implemented
+- Disable button while waiting for response
 
 ## Tech Stack
 - Visual Studio Code
