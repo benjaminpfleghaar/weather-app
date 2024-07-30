@@ -8,25 +8,25 @@ Get current temperature for a given location
 1. Build UI
 2. Style application
 3. Fetch Data
-    3.1 Get City Lat/Lon from Nominatim
-    3.2 Pass data to Open-Meteo
+    3.1 Get City Lat/Lon from [Nominatim](https://nominatim.org/release-docs/develop/)
+    3.2 Pass data to [Open-Meteo](https://open-meteo.com/)
 4. Display Output and reset form
 
 ## Challenges/Edge Cases
-- Get APIs for Location/Weather
+✅ Get APIs for Location/Weather
 - How to name components properly?
-- Hide output container initially
-- Fetching two URLs depending on each other at the same time?
+✅ Hide output container initially
+✅ Fetching two URLs depending on each other at the same time
 - Error handling
   - City does not exist
   - Weather data can not be fetched
 - Organize styles based on modules
-- Handle race conditions by using useEffect()
-- Using SCSS instead of regular CSS
+- Handle race conditions by using `useEffect()`
+✅ Using SCSS instead of regular CSS
 
 ## Things I learned so far
 - Inputs can have a Regex pattern but it doesn't work within react
-- Check if an object is empty via Object.keys(Obj).length
+- Check if an object is empty via `Object.keys(Obj).length`
 - Set focus on input on page load via autofocus (autoFocus)
 
 ## Ideas
