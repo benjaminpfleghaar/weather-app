@@ -27,10 +27,10 @@ Get current temperature for a given location
 - Hide output container initially
 
 ## Things I learned so far
-- Inputs can have a Regex pattern like `pattern=[A-Za-z]` but it doesn't work within React :(
+- Inputs can have a Regex pattern like `pattern=[A-Za-z]` but it doesn't work within React 😔
 - Check if an object is empty via `Object.keys(Obj).length`
 - Set focus on input on page load via `autofocus` (React: autoFocus)
-- Use a boolean flag inside `useEffect()` to avoid race conditions: `return () => { isFetchingData = false; }`
+- Use a boolean flag to avoid race conditions: `return () => { isFetchingData = false; }`
 
 ## Ideas
 - Show city suggestions while typing
