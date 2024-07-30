@@ -27,7 +27,7 @@ Get current temperature for a given location
 - Using SCSS instead of regular CSS
 
 ## Things I learned so far
-- Inputs can have a Regex pattern like `pattern=[A-za-z]` but it doesn't work within react
+- Inputs can have a Regex pattern like `pattern=[A-Za-z]` but it doesn't work within react
 - Check if an object is empty via `Object.keys(Obj).length`
 - Set focus on input on page load via `autofocus` (React: autoFocus)
 
