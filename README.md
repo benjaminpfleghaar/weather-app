@@ -14,7 +14,7 @@ Get current temperature for a given location
 
 ## Challenges/Edge Cases
 - How to name components properly?
-- Error handling
+- Refactor `useEffect()` hook for proper error handling
   - City does not exist
   - Weather data can not be fetched
 - Organize styles based on modules
