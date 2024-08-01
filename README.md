@@ -50,12 +50,12 @@ Get current temperature for a given location
 -   Get position of user via browser geo
 -   Save/Delete search queries
 -   Redesign the loading indicator
--   Correct misspelling: *You typed Londn, do you mean London?*
+-   Correct misspelling: _You typed Londn, do you mean London?_
 -   Change background color based on current temperature
--   Add a favicon to the header
 
 ### Implemented
 
+-   Add a favicon to the header
 -   Provide loading indicator after click
 -   Disable button while waiting for response
 
