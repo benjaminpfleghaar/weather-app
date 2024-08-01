@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+const clouds = ["☀️", " 🌤️", "⛅️", "☁️"];
+
 export default function Weather({ city, isLoading, setIsLoading }) {
 	const [error, setError] = useState(null);
 	const [weatherData, setWeatherData] = useState({});
@@ -27,7 +29,7 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 
 				// Pass coordinates to get weather data from https://open-meteo.com/
 				const weatherRessource = await fetch(
-					`https://api.open-meteo.com/v1/forecast?latitude=${coordinatesResponse[0].lat}&longitude=${coordinatesResponse[0].lon}&current=temperature_2m`,
+					`https://api.open-meteo.com/v1/forecast?latitude=${coordinatesResponse[0].lat}&longitude=${coordinatesResponse[0].lon}&current=temperature_2m,weather_code,cloud_cover`,
 					{ signal: abortController.signal }
 				);
 				if (!weatherRessource.ok) {
@@ -40,7 +42,12 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 				// Set data
 				setWeatherData({
 					city: coordinatesResponse[0].display_name,
-					temperature: weatherResponse.current.temperature_2m + "°",
+					temperature:
+						weatherResponse.current.temperature_2m +
+						weatherResponse.current_units.temperature_2m,
+					clouds: calculateCloudCover(
+						weatherResponse.current.cloud_cover
+					),
 				});
 				setError(null);
 				setIsLoading(false);
@@ -74,7 +81,28 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 	return (
 		<main>
 			<p>{weatherData.city}</p>
-			<p className="temperature">{weatherData.temperature}</p>
+			<p className="temperature">
+				{weatherData.temperature} {weatherData.clouds}
+			</p>
 		</main>
 	);
 }
+
+// Calculate cloud cover (0 - 100)
+const calculateCloudCover = (cloudCover) => {
+	let cloudArray;
+
+	for (let i = 0; i < clouds.length; i++) {
+		if (cloudCover >= 0 && cloudCover <= 25) {
+			cloudArray = clouds[0];
+		} else if (cloudCover > 25 && cloudCover <= 50) {
+			cloudArray = clouds[1];
+		} else if (cloudCover > 50 && cloudCover <= 75) {
+			cloudArray = clouds[2];
+		} else {
+			cloudArray = clouds[3];
+		}
+	}
+
+	return cloudArray;
+};
