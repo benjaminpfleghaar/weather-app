@@ -1,8 +1,12 @@
-export default function Input({ city, setCity, isLoading, setIsLoading }) {
+import { useState } from "react";
+
+export default function Input({ setCity, isLoading }) {
+	const [input, setInput] = useState("");
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		setIsLoading(true);
+		setCity(input);
 	};
 
 	return (
@@ -11,8 +15,8 @@ export default function Input({ city, setCity, isLoading, setIsLoading }) {
 				<input
 					type="text"
 					placeholder="Enter city name"
-					value={city}
-					onChange={(e) => setCity(e.target.value)}
+					value={input}
+					onChange={(e) => setInput(e.target.value)}
 					required
 					autoFocus
 				/>
