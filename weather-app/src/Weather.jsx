@@ -20,7 +20,7 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 				);
 				if (!coordinatesRessource.ok) {
 					throw new Error(
-						`HTTPS error! status: ${coordinatesRessource.status}`
+						`HTTPS error! status: ${coordinatesRessource.status} for URL: ${coordinatesRessource.url}`
 					);
 				}
 				const coordinatesResponse = await coordinatesRessource.json();
@@ -32,15 +32,15 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 				);
 				if (!weatherRessource.ok) {
 					throw new Error(
-						`HTTPS error! status: ${weatherRessource.status}`
+						`HTTPS error! status: ${weatherRessource.status} for URL: ${weatherRessource.url}`
 					);
 				}
-				const weatherData = await weatherRessource.json();
+				const weatherResponse = await weatherRessource.json();
 
 				// Set data
 				setWeatherData({
 					city: coordinatesResponse[0].display_name,
-					temperature: weatherData.current.temperature_2m + "°",
+					temperature: weatherResponse.current.temperature_2m + "°",
 				});
 				setError(null);
 				setIsLoading(false);
