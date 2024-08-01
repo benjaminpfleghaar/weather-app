@@ -21,6 +21,7 @@ Get current temperature for a given location
 -   Organize styles based on modules
 -   Redesign the loading indicator
 -   Provide meaningful error messages
+-   Correct misspelling: *You typed Londn, do you mean London?*
 
 ### Solved
 
