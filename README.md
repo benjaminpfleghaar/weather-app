@@ -50,6 +50,7 @@ Get current temperature for a given location
 -   Get position of user via browser geo
 -   Save/Delete search queries
 -   Redesign the loading indicator
+-   Add icon to indicate current weather situation (clouds, rain, ...)
 -   Correct misspelling: _You typed Londn, do you mean London?_
 -   Change background color based on current temperature
 
