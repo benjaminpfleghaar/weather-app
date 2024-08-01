@@ -47,10 +47,10 @@ Get current temperature for a given location
 
 ## 💡 Ideas
 
+-   Redesign the loading indicator
 -   Show city suggestions while typing
 -   Get position of user via browser geo
--   Save/Delete search queries
--   Redesign the loading indicator
+-   Save/Delete search queries (show when focus on input field)
 -   Add icon to indicate current weather situation (rain, snow, ...)
 -   Correct misspelling: _You typed Londn, do you mean London?_
 -   Change background color based on current temperature
