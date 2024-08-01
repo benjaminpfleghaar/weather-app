@@ -17,11 +17,9 @@ Get current temperature for a given location
 
 ## Challenges/Edge Cases
 
--   How to name components properly?
 -   Organize styles based on modules
--   Redesign the loading indicator
+-   How to name components properly?
 -   Provide meaningful error messages
--   Correct misspelling: *You typed Londn, do you mean London?*
 
 ### Solved
 
@@ -51,6 +49,8 @@ Get current temperature for a given location
 -   Show city suggestions while typing
 -   Get position of user via browser geo
 -   Save/Delete search queries
+-   Redesign the loading indicator
+-   Correct misspelling: *You typed Londn, do you mean London?*
 -   Change background color based on current temperature
 -   Add a favicon to the header
 
