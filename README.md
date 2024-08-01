@@ -17,9 +17,10 @@ Get current temperature for a given location
 
 ## ⛰️ Challenges/Edge Cases
 
--   Organize styles based on modules
--   How to name components properly?
+-   Organize styles module based
 -   Provide meaningful error messages
+-   Use a Utils.js file to organize functions
+-   Name components properly
 
 ### ✅ Solved
 
