@@ -1,12 +1,12 @@
-# Weather App
+# ☀️ Weather App
 
 Get current temperature for a given location
 
-## Wireframe
+## 👀 Wireframe
 
 ![Wireframe](https://github.com/user-attachments/assets/f4dfa280-edff-4ac0-b60c-263e3a4c6b3d)
 
-## Tasks
+## 📋 Tasks
 
 -   Build UI
 -   Style application
@@ -15,13 +15,13 @@ Get current temperature for a given location
     -   Pass data to [Open-Meteo](https://open-meteo.com/)
 -   Display output and reset form
 
-## Challenges/Edge Cases
+## ⛰️ Challenges/Edge Cases
 
 -   Organize styles based on modules
 -   How to name components properly?
 -   Provide meaningful error messages
 
-### Solved
+### ✅ Solved
 
 -   Get APIs for location/weather
 -   Handle race conditions by using `useEffect()`
@@ -32,7 +32,7 @@ Get current temperature for a given location
     -   City does not exist
     -   Weather data can not be fetched
 
-## Things I learned so far
+## 🎓 Things I learned so far
 
 -   Inputs can have a Regex pattern like `pattern=[A-Za-z]` but it doesn't work within React 😔
 -   Check if an object is empty via `Object.keys(Obj).length`
@@ -44,7 +44,7 @@ Get current temperature for a given location
 -   Using `Promise.all()` instead of `fetch()` for fetching multiple URLs
     -   But it's not applicable if the second URL needs data from the first
 
-## Ideas
+## 💡 Ideas
 
 -   Show city suggestions while typing
 -   Get position of user via browser geo
@@ -54,13 +54,13 @@ Get current temperature for a given location
 -   Correct misspelling: _You typed Londn, do you mean London?_
 -   Change background color based on current temperature
 
-### Implemented
+### ✅ Implemented
 
 -   Add a favicon to the header
 -   Provide loading indicator after click
 -   Disable button while waiting for response
 
-## Tech Stack
+## ⚙️ Tech Stack
 
 -   Visual Studio Code
 -   GitHub
