@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-const clouds = ["☀️", " 🌤️", "⛅️", "☁️"];
+import { calculateCloudCover } from "./helpers/Utils.js";
 
 export default function Weather({ city, isLoading, setIsLoading }) {
 	const [error, setError] = useState(null);
@@ -87,22 +86,3 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 		</main>
 	);
 }
-
-// Calculate cloud cover (0 - 100)
-const calculateCloudCover = (cloudCover) => {
-	let cloudArray;
-
-	for (let i = 0; i < clouds.length; i++) {
-		if (cloudCover >= 0 && cloudCover <= 25) {
-			cloudArray = clouds[0];
-		} else if (cloudCover > 25 && cloudCover <= 50) {
-			cloudArray = clouds[1];
-		} else if (cloudCover > 50 && cloudCover <= 75) {
-			cloudArray = clouds[2];
-		} else {
-			cloudArray = clouds[3];
-		}
-	}
-
-	return cloudArray;
-};

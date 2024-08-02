@@ -19,12 +19,12 @@ Get current temperature for a given location
 
 -   Organize styles module based
 -   Provide meaningful error messages
--   Use a Utils.js file to organize functions
 -   Name components properly
 
 ### ✅ Solved
 
 -   Get APIs for location/weather
+-   Use a Utils.js file to organize functions
 -   Handle race conditions by using `useEffect()`
 -   Fetching two URLs depending on each other at the same time
 -   Using SCSS instead of regular CSS
