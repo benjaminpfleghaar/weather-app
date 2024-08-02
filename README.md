@@ -32,6 +32,10 @@ Get current temperature for a given location
 -   Refactor `useEffect()` hook for proper error handling
     -   City does not exist
     -   Weather data can not be fetched
+ 
+## 👨‍🦽 Accessibility
+
+- Use `role` Tag
 
 ## 🎓 Things I learned so far
 
