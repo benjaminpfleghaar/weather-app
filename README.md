@@ -47,6 +47,7 @@ Get current temperature for a given location
 
 ## 💡 Ideas
 
+-   Display an image of the city
 -   Redesign the loading indicator
 -   Show city suggestions while typing
 -   Get position of user via browser geo
