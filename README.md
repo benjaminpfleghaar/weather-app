@@ -37,7 +37,9 @@ Get current temperature for a given location
 
 - Use `role` Tag
 - Use `aria-label`
+- Have a look at `prefers-reduced-motion`
 - Rely on `label` for inputs instead of `placeholder`?
+- Use `accesskey`
 
 ## 🎓 Things I learned so far
 
