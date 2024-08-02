@@ -36,6 +36,7 @@ Get current temperature for a given location
 ## 👨‍🦽 Accessibility
 
 - Use `role` Tag
+- Use `aria-label`
 
 ## 🎓 Things I learned so far
 
