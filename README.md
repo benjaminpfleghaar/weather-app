@@ -21,7 +21,7 @@ Get current temperature for a given location
 -   Provide meaningful error messages
 -   Name components properly
 
-### ✅ Solved
+### Solved
 
 -   Get APIs for location/weather
 -   Use a Utils.js file to organize functions
@@ -54,6 +54,10 @@ Get current temperature for a given location
     -   But it's not applicable if the second URL needs data from the first
 -   Use an updater function for more consistency `useState((preValue) => newValue)`
 
+### Open questions
+
+- Is the updater function really always necessary?
+
 ## 💡 Ideas
 
 -   Display an image of the city
@@ -65,7 +69,7 @@ Get current temperature for a given location
 -   Correct misspelling: _You typed Londn, do you mean London?_
 -   Change background color based on current temperature
 
-### ✅ Implemented
+### Implemented
 
 -   Add a favicon to the header
 -   Provide loading indicator after click
