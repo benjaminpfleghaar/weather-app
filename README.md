@@ -52,6 +52,7 @@ Get current temperature for a given location
     -   How to combine it with `try/catch()`
 -   Using `Promise.all()` instead of `fetch()` for fetching multiple URLs
     -   But it's not applicable if the second URL needs data from the first
+-   Use an updater function for more consistency `useState((preValue) => newValue)`
 
 ## 💡 Ideas
 
