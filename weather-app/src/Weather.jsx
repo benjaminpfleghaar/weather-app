@@ -40,7 +40,6 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 
 				// Set data
 				setWeatherData((prevWeatherData) => ({
-					prevWeatherData,
 					city: coordinatesResponse[0].display_name,
 					temperature:
 						weatherResponse.current.temperature_2m +
