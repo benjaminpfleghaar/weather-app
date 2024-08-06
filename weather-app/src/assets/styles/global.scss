@@ -1,3 +1,5 @@
+@import "mixins";
+
 * {
 	box-sizing: border-box;
 }
@@ -7,17 +9,8 @@ body {
 	background: lightgray;
 	font-family: sans-serif;
 }
-header,
-main {
-	padding: 24px;
-	margin: 0 auto;
-	max-width: 50vw;
-	border-radius: 8px;
-	background: white;
-	box-shadow: 0 0 8px 0 darkgray;
-}
 header {
-	margin: 64px auto 8px;
+	@include container(64px auto 8px);
 
 	form {
 		display: flex;
@@ -37,6 +30,8 @@ header {
 	}
 }
 main {
+	@include container(0 auto);
+
 	p {
 		margin: 0;
 	}
