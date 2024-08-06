@@ -6,7 +6,7 @@ export default function Input({ setCity, isLoading }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		setCity(input);
+		setCity((prevCity) => input);
 	};
 
 	return (
@@ -16,7 +16,7 @@ export default function Input({ setCity, isLoading }) {
 					type="text"
 					placeholder="Enter city name"
 					value={input}
-					onChange={(e) => setInput(e.target.value)}
+					onChange={(e) => setInput((prevInput) => e.target.value)}
 					required
 					autoFocus
 				/>
