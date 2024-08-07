@@ -57,6 +57,13 @@ Get current temperature for a given location
 ### Open questions
 
 - Is the updater function really always necessary?
+- Why are there different types of updater functions?
+    - return/no-return? 
+    - `setState(previousState => newState);`
+    - `setState(previousState => {return newState});`
+    - Previous variable or state variable?
+    - `setState(previousState => ({...previousState, newState}));`
+    - `setState(previousState => ({...state, newState}));`
 
 ## 💡 Ideas
 
