@@ -7,7 +7,7 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 
 	useEffect(() => {
 		// Start loading indicator
-		setIsLoading((prevIsLoading) => true);
+		setIsLoading(() => true);
 
 		// Use AbortController to handle cleanup
 		const abortController = new AbortController();
@@ -39,7 +39,7 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 				const weatherResponse = await weatherRessource.json();
 
 				// Set data
-				setWeatherData((prevWeatherData) => ({
+				setWeatherData(() => ({
 					city: coordinatesResponse[0].display_name,
 					temperature:
 						weatherResponse.current.temperature_2m +
@@ -48,11 +48,11 @@ export default function Weather({ city, isLoading, setIsLoading }) {
 						weatherResponse.current.cloud_cover
 					),
 				}));
-				setError((prevError) => null);
-				setIsLoading((prevIsLoading) => false);
+				setError(() => null);
+				setIsLoading(() => false);
 			} catch (err) {
-				setError((prevError) => err);
-				setIsLoading((prevIsLoading) => false);
+				setError(() => err);
+				setIsLoading(() => false);
 			}
 		};
 
