@@ -53,19 +53,14 @@ Get current temperature for a given location
 -   Using `Promise.all()` instead of `fetch()` for fetching multiple URLs
     -   But it's not applicable if the second URL needs data from the first
 -   Use an updater function for more consistency `useState((preValue) => newValue)`
-
-### Open questions
-
-- Is the updater function really always necessary?
-- Why are there different types of updater functions?
-    - return/no-return? 
-        - `setState(previousState => newState);`
-        - `setState(previousState => {return newState});`
-    - Previous variable or state variable?
-        - `setState(previousState => ({...previousState, newState}));`
-        - `setState(previousState => ({...state, newState}));`
-    - Without previous variable
-        - `setState(() => newState);`
+    - Case 1 (return/no-return)
+        - `setState(prevState => ({ count: prevState.count + 1 })); // concise`
+        - `setState(prevState => { return { count: prevState.count + 1 } }); // explicit`
+    - Case 2 (Previous variable or state variable?)
+        - `setState(prevState => ({ ...prevState, name: 'Updated React' })); // best practice`
+        - `setState(prevState => ({ ...state, name: 'Updated React' })); // potential bug`
+    - Case 3 (Without previous variable)
+        - `setState(() => ({ count: 0, name: 'Reset React' })); // direct update, no previous state needed`
 
 ## 💡 Ideas
 
